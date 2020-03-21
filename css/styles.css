@@ -23,6 +23,12 @@ hr {
     background-color:#e5e5e5 ;
 }
 
+/*Page*/
+
+.page {
+    overflow: hidden;
+}
+
 /*Container*/
 .container {
     padding: 15px 0;
@@ -488,7 +494,7 @@ padding-left: 240px;
 position: relative;
 }
 .reviews__photo {
-    
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -525,6 +531,15 @@ position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
+}
+.logos__item {
+    padding: 0 15px;
+}
+.logos__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /*Works*/
@@ -623,6 +638,7 @@ opacity: 0.1;
 
 .blog {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .blog__item {
@@ -725,6 +741,9 @@ opacity: 0.1;
     padding-top: 65px;
     background-color: #f8f8f8;
 }
+.footer__col {
+    padding: 0 15px;
+}
 .footer__col--first {
     width: 40%;
 }
@@ -736,6 +755,7 @@ opacity: 0.1;
 }
 .footer__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 65px;
 }
@@ -874,12 +894,14 @@ opacity: 0.1;
     justify-content: space-between;
 }
 .instagram__item {
-    width: 32.33333%;
+    width: 33%;
     border-bottom: 1px solid #fff;
 }
 
 .instagram__item img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /*Copyright*/
@@ -903,6 +925,11 @@ opacity: 0.1;
     }
     .intro__title {
         font-size: 120px;
+    }
+
+    /*Reviews*/
+    .reviews {
+        font-size: 18px;
     }
 }
 
@@ -929,13 +956,69 @@ opacity: 0.1;
 
     /*Services*/
 
-.services__item {
-    width: 50%;
-    padding-bottom: 0;
+    .services__item {
+        width: 50%;
+        padding-bottom: 0;
 }
-.services__item--border {
-    border-bottom: 0;
+     .services__item--border {
+        border-bottom: 0;
 }
+
+    /*Reviews*/ 
+    .reviews {
+        padding: 0 60px;
+    }
+    .reviews__photo {
+        width: 150px;
+        height: 150px;
+    }
+    .reviews__text {
+        font-size: 18px;
+    }
+
+    /*Clients*/
+    .clients {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .clients__item {
+        width: 100%;
+        padding-right: 0;
+    }
+    .clients__item:last-child {
+        margin-bottom: 0;
+    }
+    /*Blog*/
+    .blog {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .blog__item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .blog__item:last-child {
+        margin-bottom: 0;
+    }
+
+    /*Footer*/
+    .footer__col--first {
+        width: 100%;
+    }
+    .footer__col--second,
+    .footer__col--third {
+        width: 50%;
+    }
+    /*Instagram*/
+    .instagram {
+        justify-content: flex-start;
+    }
+    .instagram__item {
+        width: auto;
+        border-right: 1px solid #fff;
+    }
 }
 
 @media(max-width: 770px) { /*планшеты min*/
@@ -982,6 +1065,10 @@ opacity: 0.1;
     /*Services*/
     .services__item {
         width: 100%;
+        
+    }
+    .reviews__photo {
+        position: static;
     }
 
     /*wedo*/
@@ -992,7 +1079,28 @@ opacity: 0.1;
     .wedo__item {
         width: 100%;
     }
-    
+
+    /*Reviews*/ 
+    .reviews__photo {
+        margin: 0 auto;
+    }
+    .reviews__item {
+        padding-left: 0;
+    }
+
+    /*Works*/
+    .works {
+        flex-wrap: wrap;
+    }
+    .works__col {
+        flex: none;
+        width: 50%;
+    }
+    /*Footer*/
+    .footer__col--second,
+    .footer__col--third {
+        width: 100%;
+    }
 }
 
 @media(max-width: 575px) { /*мобильные устр*/
@@ -1041,5 +1149,57 @@ opacity: 0.1;
         width: 180px;
         bottom: -50px;
         right: -80px;
+    }
+    /*Reviews*/
+
+    .reviews {
+    padding: 0; 
+    }
+
+    /*Logos*/
+    .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logos__item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .logos__img {
+        margin: 0 auto;
+    }
+
+    /*Works*/
+    .works {
+        flex-wrap: wrap;
+    }
+    .works__col {
+        flex: none;
+        width: 100%;
+    }
+    /*Clients*/
+    .clients__photo {
+        position: static;
+    }
+    .clients__item {
+        padding-left: 0;
+        text-align: center;
+    }
+    .clients__text:before {
+        margin: 15px auto;
+    }
+
+    /*Subscribe*/
+    .subscribe {
+        flex-wrap: wrap;
+        max-width: none;
+    }
+    .subscribe__input {
+        margin-bottom: 10px;
+        border-right: 1px solid #e7e7e7;
+    }
+    .subscribe__input,
+    .subscribe__btn {
+        width: 100%;
     }
 }
