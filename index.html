@@ -10,27 +10,37 @@
     <title>MOGO</title>
 </head>
 <body>
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">MoGo</div>
+            <div class="header__logo"  data-scroll="#intro">MoGo</div>
 
-            <nav class="nav">
-                <a class="nav__link" href="#">ABOUT</a>
-                <a class="nav__link" href="#">SERVICE</a>
-                <a class="nav__link" href="#">WORK</a>
-                <a class="nav__link" href="#">BLOG</a>
-                <a class="nav__link" href="#">CONTACT</a>
+            <nav class="nav" id="nav">
+                <a class="nav__link" href="#"
+                 data-scroll="#about">ABOUT</a>
+                <a class="nav__link" href="#"
+                 data-scroll="#services">SERVICE</a>
+                <a class="nav__link" href="#"
+                 data-scroll="#work">WORK</a>
+                <a class="nav__link" href="#"
+                 data-scroll="#blog">BLOG</a>
+                <a class="nav__link" href="#"
+                 data-scroll="#footer">CONTACT</a>
                 <a class="nav__link" href="#"><img src="./img/header_icon1.png" alt=""></a>
                 <a class="nav__link" href="#"><img src="./img/header_icon2.png" alt=""></a>
             </nav>
+
+            <button class="nav__toggle" id="nav_toggle" type="button">
+                <span class="nav__toggle__item">meny</span>
+            </button>
+
         </div>
     </div>
 </header>
 
 <div class="page">
 
-<div class="intro">
+<div class="intro" id="intro">
     <div class="container">
         <div class="intro__inner">
             <h2 class="intro__suptitle">Creative Template</h2>
@@ -62,7 +72,7 @@
     </div>
 </div>
 
-<section class="section">
+<section class="section" id="about">
     <div class="container">
         <div class="section__header">
             <h3 class="section__subtitle">What we do</h3>
@@ -131,7 +141,7 @@
     </div>
 </div>
 
-<section class="section">
+<section class="section" id="services">
     <div class="container">
         <div class="section__header">
             <h3 class="section__subtitle">We work with</h3>
@@ -226,12 +236,12 @@
             </div>
             <div class="wedo__item">
                 <div class="accordion">
-                    <div class="accordion__item">
+                    <div class="accordion__item"  data-collapse="#wedo_1">
                         <div class="accordion__header">
                             <img class="accordion__icon" src="./img/icon.jpg" alt="">
                             <div class="accordion__title">Photography</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="wedo_1">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -245,12 +255,12 @@
                         </div>
                     </div>
 
-                    <div class="accordion__item active">
+                    <div class="accordion__item active" data-collapse="#wedo_2">
                         <div class="accordion__header">
                             <img class="accordion__icon" src="./img/icon2.png" alt="">
                             <div class="accordion__title">creativity</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="wedo_2">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -264,12 +274,12 @@
                         </div>
                     </div>
 
-                    <div class="accordion__item">
-                        <div class="accordion__header">
+                    <div class="accordion__item" data-collapse="#wedo_3">
+                        <div class="accordion__header" >
                             <img class="accordion__icon" src="./img/icon3.png" alt="">
                             <div class="accordion__title">web design</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="wedo_3">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -423,7 +433,7 @@
         </div>
 
     </div>
-    <div class="works">
+    <div class="works" id=work>
         <div class="works__col">
             <div class="works__item">
                 <img class="works__image" src="./img/works1.png" alt="">
@@ -564,7 +574,7 @@
             <h2 class="section__title">Latest blog</h2>
         </div>
 
-        <div class="blog">
+        <div class="blog" id="blog">
 
             <div class="blog__item">
                 <div class="blog__header">
@@ -649,7 +659,7 @@
     </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container">
 
         <div class="footer__inner">
@@ -793,6 +803,11 @@
 </footer>
 
 </div>
+
+<script
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="./js/index.js"></script>
 
 </body>
 </html>
