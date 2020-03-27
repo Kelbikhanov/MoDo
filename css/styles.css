@@ -49,7 +49,7 @@ hr {
     min-height: 820px;
     position: relative;
 
-    background: url(../img/intro.jpg) center
+    background: url(../img/intro-min.jpg) center
      no-repeat;
 }
 .intro__inner {
@@ -328,13 +328,13 @@ translateX(-3px);
      background-size: cover;
 }
 .section--clients {
-    background: url(../img/bg_clients.jpg)
+    background: url(../img/bg_clients-min.jpg)
      center no-repeat;
      background-size: cover;
 }
 .section--map {
     padding: 40px 0;
-    background: url(../img/bg_maps.jpg)
+    background: url(../img/bg_maps-min.jpg)
      center no-repeat;
      background-size: cover;
 }
